@@ -20,7 +20,7 @@ ou atraves do arquivo swagger.json
 , para acessar não é preciso fazer autenticação com o usuário
     
 # Build 
-    Necessario instalar a versão 17 na máquina
+    Necessário instalar a versão 17 na máquina
     Para o build do projeto executar o comando mvnw clean install
 
 # Nota 1
