@@ -4,8 +4,6 @@
 
     A arquitetura do código é baseada no padrao RestFULL, utilizando como 
     build a ferramenta maven.
-    Adicionei a opoção de envia dos dados do arquivo, para fazer isso basta converter os bytes
-    do arquivo para Base64
     Onde:
        O metodo PUT estou utilizabdo para operação de atualização do beneficiario
        O metodo GET nas operaçoes de busca beneficiario
@@ -20,9 +18,12 @@ ou atraves do arquivo swagger.json
 , para acessar não é preciso fazer autenticação com o usuário
     
 # Build 
-    Necessário instalar a versão 17 na máquina
-    Para o build do projeto executar o comando mvnw clean install
+    Necessário instalar a versão 17 na máquina.
+    Para o build do projeto executar o comando mvnw clean install.
+    O arquivo da aplicação estará na pasta target com o nome "CadBeneficiario-1.0.0.jar"
+# Execução
+    Efetuar o comando java -jar CadBeneficiario-1.0.0.jar
 
 # Nota 1
     Caso tenha mais de um java instalado, utilizar o java Versao 17 e configurar a variavel de ambiente 
-    JAVA_HOME com o caminho da versao do java no computador
+    JAVA_HOME com o caminho da versao do java no computador.
