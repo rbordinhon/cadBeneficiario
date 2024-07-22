@@ -4,6 +4,8 @@
 
     A arquitetura do código é baseada no padrao RestFULL, utilizando como 
     build a ferramenta maven.
+    Adicionei a opoção de envia dos dados do arquivo, para fazer isso basta converter os bytes
+    do arquivo para Base64
     Onde:
        O metodo PUT estou utilizabdo para operação de atualização do beneficiario
        O metodo GET nas operaçoes de busca beneficiario

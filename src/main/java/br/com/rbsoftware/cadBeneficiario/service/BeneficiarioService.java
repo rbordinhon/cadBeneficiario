@@ -130,15 +130,15 @@ public class BeneficiarioService {
         bene.setDataAtualizacao(null);
         bene.setDataInclusao(benAtual.getDataInclusao());
         bene.setDataAtualizacao(LocalDateTime.now());
-        bene.setTelefone(dto.telefone);
+        bene.setTelefone(dto.telefone.replaceAll("\\D",""));
         bene.setDataNascimento(LocalDate.parse(dto.dataNascimento, DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         List<Documento> docs =  new ArrayList<>();
         for (DocumentoDTO doc:dto.documentos){
             Documento docEnt =  new Documento();
             docEnt.setBeneficiario(bene);
-            docEnt.setDescricao(doc.descricao);
+            docEnt.setDescricao(doc.descricao.trim());
             docEnt.setDadosDocumento(Base64.getDecoder().decode(doc.dadosDocumento));
-            docEnt.setTipoDocumento(doc.tipoDocumento);
+            docEnt.setTipoDocumento(doc.tipoDocumento.trim());
             docEnt.setDataInclusao(LocalDateTime.now());
             docEnt.setDataAtualizacao(docEnt.getDataInclusao());
             docs.add(docEnt);
@@ -153,15 +153,15 @@ public class BeneficiarioService {
         bene.setDataAtualizacao(null);
         bene.setDataInclusao(LocalDateTime.now());
         bene.setDataAtualizacao(bene.getDataInclusao());
-        bene.setTelefone(dto.telefone);
+        bene.setTelefone(dto.telefone.replaceAll("\\D",""));
         bene.setDataNascimento(LocalDate.parse(dto.dataNascimento, DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         List<Documento> docs =  new ArrayList<>();
         for (DocumentoDTO doc:dto.documentos){
             Documento docEnt =  new Documento();
             docEnt.setBeneficiario(bene);
-            docEnt.setDescricao(doc.descricao);
+            docEnt.setDescricao(doc.descricao.trim());
             docEnt.setDadosDocumento(Base64.getDecoder().decode(doc.dadosDocumento));
-            docEnt.setTipoDocumento(doc.tipoDocumento);
+            docEnt.setTipoDocumento(doc.tipoDocumento.trim());
             docEnt.setDataInclusao(LocalDateTime.now());
             docEnt.setDataAtualizacao(docEnt.getDataInclusao());
             docs.add(docEnt);
